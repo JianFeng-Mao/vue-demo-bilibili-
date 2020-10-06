@@ -1,0 +1,260 @@
+body,input,button,ul,li{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+body,html{
+    width: 100%;
+}
+#wrap{
+    width: 100%;
+    overflow-y: scroll;
+}
+header{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.logo{
+    margin-left: 18px;
+}
+
+.search-box{
+    width: 132px;
+    height: 24px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    color: #999;
+    font-size: 10px;
+}
+.search-box svg{
+    margin-left: 10px;
+}
+.search-box span{
+    width: 92px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user svg{
+    border-radius: 50%;
+}
+
+.download-app{
+    margin-right: 12px;
+    padding: 0 10px;
+    height: 23px;
+    outline: none;
+    background-color: #fb7299;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 4px;
+    line-height: 23px;
+}
+
+
+/* 导航栏区域 */
+.nav-area{
+    position: fixed;
+    top: 54px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+.nav-area .nav-list{
+    white-space: nowrap;
+    width: 85%;
+    overflow-x: scroll;
+    padding-left: 24px;
+}
+.nav-area .nav-list::-webkit-scrollbar{
+    display: none;
+}
+.nav-area .nav{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 40px;
+    color: #757575;
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+}
+.nav-area .nav.active{
+    border-color:#fb7299;
+    color: #fb7299;
+}
+.nav-area .down-nav {
+    /* display: inline-block; */
+    position: absolute;
+    right: 18px;
+    top: -5px;
+}
+/* 隐藏的导航区域 */
+.hide-nav-area{
+    position: fixed;
+    top: 54px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding-bottom: 20px;
+    background-color: #fff;
+    transition: top .2s;
+
+}
+.hide-nav-area .nav{
+    display: inline-block;
+    width: 32px;
+    margin: 0 14px 10px 14px;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #757575;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+.hide-nav-area .nav.big{
+    width: 46px;
+    margin: 0 7px;
+}
+.hide-nav-area .nav.active{
+    border-color:#fb7299;
+    color: #fb7299;
+}
+.hide-nav-area .up-nav{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hide{
+    top: -133px;
+}
+
+/* 轮播图区域 */
+.banner-area{
+    position: relative;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 6px;
+
+}
+.banner-area .banner-list{
+    width: calc(350px * 4);
+    position: absolute;
+    left: 0;
+}
+.banner-area .banner-list .banner{
+    width: 350px;
+    height: 110px;
+    float: left;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.banner-point{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    height: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 3px;
+}
+.banner-point span{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    margin: 0 3px;
+    border-radius: 50%;
+}
+.banner-point span.active{
+    background-color: #fb7299;
+}
+
+/* 视频区域 */
+.video-area{
+    padding-top: 100px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.video-area .video-list::after{
+    display: block;
+    content:'';
+    clear: both;
+}
+.video-area .video{
+    float: left;
+    width: 50%;
+}
+
+.video-area .video-poster{
+    position: relative;
+    height: 106px;
+    margin: 0 6px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.video-area .video-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 12px;
+    background-image: linear-gradient(rgba(33, 33, 33, 0), rgba(33, 33, 33, .5));
+}
+.video-area .video-info div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.video-area .video-info svg{
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+    fill: #fff;
+
+}
+
+.video-area .video img{
+    width: 100%;
+    height: 100%;
+}
+.video-area .video-title{
+    margin: 6px 6px 10px;
+    height: 38px;
+    line-height: 20px;
+    font-size: 13px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+} 
